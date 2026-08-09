@@ -1,18 +1,28 @@
 const perguntas = [
   {
-    pergunta: "Onde foi o nosso primeiro encontro?",
-    alternativas: ["No cinema", "No parque", "Na sorveteria"],
-    correta: 1 // Índice da resposta correta (começa em 0)
+    pergunta: "Que dia nos conhecemos?( essa é fácil)",
+    alternativas: ["9 de dezembro", "10 de dezembro", "24 de agosto"],
+    correta: [0] // Aceita 9 de dezembro
   },
   {
-    pergunta: "Qual é a minha comida favorita?",
-    alternativas: ["Pizza", "Hambúrguer", "Comida japonesa"],
-    correta: 0
+    pergunta: "Qual nosso jogo favorito?",
+    alternativas: ["Mine", "FF"],
+    correta: [1]
   },
   {
-    pergunta: "Joguinho favorito?",
-    alternativas: ["Vava", "Gta", "Pokemon"],
-    correta: 0
+    pergunta: "Qual nosso anime favorito?",
+    alternativas: ["Fuufu", "aot", "Horimiya", "One piece"],
+    correta: [0, 2] // Aceita "Fuufu" (0) E "Horimiya" (2)
+  },
+  {
+    pergunta: "O que mais gostamos de fazer juntos?",
+    alternativas: ["Ir call(fofocar)", "Jogar", "Assistir"],
+    correta: [0]
+  },
+  {
+    pergunta: "E o ultimo, o que eu mais gosto em você?",
+    alternativas: ["Sua sinceridade", "Sua Personalidade", "Sua beleza", "Sua inteligência"],
+    correta: [0, 1, 2, 3] // Aceita qualquer uma das 4 opções
   }
 ];
 
@@ -40,7 +50,8 @@ function carregarPergunta() {
 function verificarResposta(indexSelecionado) {
   const atual = perguntas[perguntaAtual];
   
-  if (indexSelecionado === atual.correta) {
+  // O .includes() verifica se o botão clicado está dentro do array de respostas corretas
+  if (atual.correta.includes(indexSelecionado)) {
     elementoResultado.textContent = "Acertou! Te amo ❤️";
     elementoResultado.style.color = "green";
     perguntaAtual++;

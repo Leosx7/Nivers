@@ -114,7 +114,7 @@ body {
     color: beige;
     text-align: center;
     padding: 10px;
-    margin: 5px;
+    margin:auto;
 }
 /* --- CONFIGURAÇÕES PARA CELULAR (Telas até 768px) --- */
 @media (max-width: 768px) {
