@@ -1,0 +1,155 @@
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+}
+.primeiro_paragrafo{
+    background-color: pink
+        ;
+    color: beige;
+    margin: 20px;
+    border: 2px solid black;
+}
+.meu-cabecalho{
+    background-color: pink
+        ;
+    color: beige;
+    text-align: left;
+    padding: 10px;
+    display: center;
+    justify-content: space-between;
+    margin: 5px
+    ;
+}
+.link1{
+    background-color: beige
+        ;
+    color: pink;
+    text-decoration: none;
+    border-radius: 15%;
+    padding: 8px;
+}
+.link2{
+    background-color: beige
+        ;
+    color: pink;
+    text-decoration: none;
+    border-radius: 15%;
+    padding: 8px;
+}
+.meu-titulo{
+    background-color: pink
+        ;
+    color: beige;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+.imagem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.texto1_index{
+
+    color: pink;
+    text-align: left;
+    padding: 10px;
+
+}
+/* CSS */
+
+.flex-container {
+  display: flex;             /* Define este elemento como um contêiner flexível */
+  flex-direction: row;        /* Exibe os itens (texto e imagem) em uma linha (padrão) */
+  align-items: left;       /* Centraliza verticalmente o texto e a imagem entre si */
+  justify-content: center;    /* Centraliza o grupo inteiro horizontalmente na página */
+  gap: 20px;                 /* Adiciona um espaço de 20px entre o texto e a imagem */
+  max-width: 2000px;         /* (Opcional) Define uma largura máxima para o grupo */
+  margin: 10px auto;         /* (Opcional) Adiciona margem acima/abaixo e centraliza na página */
+}
+
+/* Opcional: Garante que a imagem não fique muito grande */
+.flex-container img {
+  max-width: 50%;            /* A imagem nunca ocupará mais de 50% da largura do contêiner */
+  height: auto;              /* Mantém a proporção da imagem */
+}
+
+/* Opcional: Estiliza o parágrafo dentro do flex container */
+.flex-container p {
+  flex: 1;                   /* O texto preenche o espaço restante (flexível) */
+  color: pink
+  ;            /* Exemplo: mantendo a cor que parece estar no original */
+  text-align: center;      /* (Opcional) Alinha o texto à esquerda ou centro */
+    font-size: 20px;            /* (Opcional) Define o tamanho da fonte */
+}
+.quiz-container {
+  background-color: beige;
+  border: 2px solid pink;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.quiz-container button {
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.quiz-container button:hover {
+  background-color: pink;
+}
+.rodape{
+    background-color: pink
+    ;
+    color: beige;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+/* --- CONFIGURAÇÕES PARA CELULAR (Telas até 768px) --- */
+@media (max-width: 768px) {
+  
+  /* Faz o texto e a imagem ficarem um embaixo do outro no celular */
+  .flex-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  /* Garante que a imagem não ultrapasse a tela do celular */
+  .flex-container img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Ajusta os tamanhos de texto para não ficarem gigantes no celular */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .flex-container p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Ajusta o contêiner do quiz no celular */
+  .quiz-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .quiz-container button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
